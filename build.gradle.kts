@@ -1,13 +1,12 @@
 plugins {
     java
+    `maven-publish`
     kotlin("jvm") version "1.5.21"
     kotlin("plugin.serialization") version "1.5.21"
 }
 
 group = "pw.dotdash"
-version = "0.1.1"
-
-apply(plugin = "maven")
+version = "0.1.2
 
 repositories {
     mavenCentral()
