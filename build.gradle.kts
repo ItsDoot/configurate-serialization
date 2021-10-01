@@ -41,10 +41,19 @@ tasks {
     }
 }
 
-sourceSets {
-    main {
-        java {
-            srcDir("src/main")
+val sourcesJar by tasks.registering(Jar::class) {
+    archiveClassifier.set("sources")
+    from(sourceSets.main.get().allSource)
+}
+
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            artifactId = project.name
+            from(components["java"])
+            artifact(sourcesJar.get())
         }
     }
 }
+
