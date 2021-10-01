@@ -6,9 +6,9 @@ import kotlinx.serialization.internal.TaggedDecoder
 import kotlinx.serialization.modules.EmptyModule
 import kotlinx.serialization.modules.SerialModule
 import kotlinx.serialization.modules.getContextualOrDefault
-import ninja.leaping.configurate.ConfigurationNode
-import ninja.leaping.configurate.SimpleConfigurationNode
-import ninja.leaping.configurate.Types
+import org.spongepowered.configurate.ConfigurationNode
+import org.spongepowered.configurate.SimpleConfigurationNode
+import org.spongepowered.configurate.Types
 
 class ConfigurationNodeParser(override val context: SerialModule = EmptyModule) : SerialFormat {
 
