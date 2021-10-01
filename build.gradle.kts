@@ -1,7 +1,7 @@
 plugins {
     java
-    kotlin("jvm") version "1.3.71"
-    kotlin("plugin.serialization") version "1.3.71"
+    kotlin("jvm") version "1.5.21"
+    kotlin("plugin.serialization") version "1.5.21"
 }
 
 group = "pw.dotdash"
@@ -15,13 +15,13 @@ repositories {
 }
 
 dependencies {
-    api(kotlin("stdlib-jdk8"))
+    api("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.21")
 
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.20.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime:1.0-M1-1.4.0-rc")
 
-    api("org.spongepowered:configurate-core:3.6")
+    api("org.spongepowered:configurate-core:4.1.2")
 
-    testImplementation("org.spongepowered:configurate-hocon:3.6")
+    testImplementation("org.spongepowered:configurate-hocon:4.1.2")
     testImplementation("junit:junit:4.12")
 }
 
