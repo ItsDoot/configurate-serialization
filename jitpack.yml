@@ -1,5 +1,3 @@
 install:
   - echo "Running a custom install command"
-  - ./gradlew install
-  - ./gradlew tasks --all
-  - ./gradlew clean -Pgroup=com.github.DrZoddiak -Pversion=patch-1-a846d86874-1 -xtest build publishToMavenLocal -Xopt-in=kotlin.RequiresOptIn
+  - ./gradlew clean install -Xopt-in=kotlin.RequiresOptIn
