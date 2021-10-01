@@ -2,10 +2,10 @@ package pw.dotdash.configurate.serialization
 
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.Serializable
-import ninja.leaping.configurate.commented.CommentedConfigurationNode
-import ninja.leaping.configurate.hocon.HoconConfigurationLoader
 import org.junit.Assert.assertEquals
 import org.junit.Test
+import org.spongepowered.configurate.CommentedConfigurationNode
+import org.spongepowered.configurate.hocon.HoconConfigurationLoader
 import java.io.BufferedReader
 
 internal fun <T> deserializeConfig(source: String, deserializer: DeserializationStrategy<T>): T {
@@ -14,7 +14,7 @@ internal fun <T> deserializeConfig(source: String, deserializer: Deserialization
 }
 
 private fun loadHoconNode(source: String): CommentedConfigurationNode =
-    HoconConfigurationLoader.builder().setSource { BufferedReader(source.reader()) }.build().load()
+    HoconConfigurationLoader.builder().source() { BufferedReader(source.reader()) }.build().load()
 
 class ObjectsTest {
 
