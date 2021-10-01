@@ -8,8 +8,8 @@
 
 ```kotlin
 plugins {
-    kotlin("jvm") version "1.3.71"
-    kotlin("plugin.serialization") version "1.3.71"
+    kotlin("jvm") version "1.5.21"
+    kotlin("plugin.serialization") version "1.5.21"
 }
 
 repositories {
@@ -19,10 +19,10 @@ repositories {
 }
 
 dependencies {
-    implementation(kotlin("stdlib-jdk8"))
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.20.0")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.21")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime:1.0-M1-1.4.0-rc")
     
-    implementation("org.spongepowered:configurate-core:3.6")
+    implementation("org.spongepowered:configurate-core:4.1.2")
 
     implementation("com.github.ItsDoot:configurate-serialization:0.1.0")
 }
