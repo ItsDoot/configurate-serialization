@@ -40,3 +40,11 @@ tasks {
         kotlinOptions.jvmTarget = "1.8"
     }
 }
+
+sourceSets {
+    main {
+        java {
+            srcDir("src/main")
+        }
+    }
+}
